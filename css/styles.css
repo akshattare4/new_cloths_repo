@@ -1,0 +1,271 @@
+/* Colors: #FFEDFA, #E195AB, #DE3163, #CCDF92 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #FFEDFA;
+    color: #333;
+}
+
+header {
+    background-color: #DE3163;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    margin-left: 10px;
+}
+
+header .logo {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.nav-action-btn {
+    position: relative;
+}
+
+.nav-action-btn .icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.nav-action-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #DE3163;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.8rem;
+}
+
+section {
+    padding: 2rem;
+    text-align: center;
+}
+
+.product {
+    display: inline-block;
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #E195AB;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: #DE3163;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.cart {
+    background-color: #CCDF92;
+    border: 1px solid #999;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.cart:hover {
+    background-color: #b5d37c;
+}
+
+.like-button {
+    background-color: #FFEDFA;
+    border: none;
+    color: #DE3163;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #000;
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.like-button:hover {
+    background-color: #ffccd5;
+}
+
+#banner {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    height: 400px; /* Adjust the height as needed */
+}
+
+.banner-slide {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.banner-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-navigation {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.nav-dot {
+    height: 15px;
+    width: 15px;
+    background-color: #E195AB;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#video {
+    padding: 2rem;
+    text-align: center;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    margin-top: 2rem;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#wishlist-items, #cart-items {
+    text-align: left;
+}
+
+#cart-total {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#cartList .product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #CCDF92;
+}
+
+#cartList .product input {
+    width: 50px;
+    margin-left: 10px;
+}
+
+button {
+    background-color: #DE3163;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #b0244b;
+}
+
+#placeOrderBtn {
+    margin-top: 20px;
+}

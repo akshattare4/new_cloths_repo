@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloth Mart</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.jpg">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
+    
+</head>
+<body>
+    <header>
+        
+        <div class="logo-container">
+            <img src="images/logo.jpg" alt="ClothMart Logo" class="logo">
+            <h1>ClothMart</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <a href="liked.html" class="nav-action-btn">
+                        <img src="images/shopping-bag.png" alt="Wishlist Icon" class="icon" width="25" height="25">
+                        <span class="nav-action-text"></span>
+                        <data class="nav-action-badge" id="wishlist-count" aria-hidden="true">0</data>
+                    </a>
+                </li>
+                <li>
+                    <a href="cart.html" class="nav-action-btn">
+                        <img src="images/shopping-cart.png" alt="Cart Icon" class="icon" width="25" height="25">
+                        <span class="nav-action-text"><strong id="basket-total">₹0.00</strong></span>
+                        <data class="nav-action-badge" id="basket-count" aria-hidden="true">0</data>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="banner">
+        <div class="banner-slide">
+            <img src="images/banner1.jpg" alt="Banner 1">
+        </div>
+        <div class="banner-slide">
+            <img src="images/banner2.jpg" alt="Banner 2">
+        </div>
+        <div class="banner-slide">
+            <img src="images/banner3.jpg" alt="Banner 3">
+        </div>
+        <div class="banner-slide">
+            <img src="images/banner4.jpg" alt="Banner 4">
+        </div>
+        <div class="banner-navigation">
+            <span class="nav-dot" onclick="currentSlide(1)"></span>
+            <span class="nav-dot" onclick="currentSlide(2)"></span>
+            <span class="nav-dot" onclick="currentSlide(3)"></span>
+            <span class="nav-dot" onclick="currentSlide(4)"></span>
+        </div>
+    </section>
+
+    <section id="home">
+        <h2>Welcome to ClothMart</h2>
+        <p>Your one-stop shop for the latest fashion.</p>
+    </section>
+
+    <section id="products">
+        <h2>Our Products</h2>
+        <div class="product" id="product1">
+            <img src="images/shirt.jpg" alt="Shirt" width="250" height="250">
+            <h3>Stylish Shirt</h3>
+            <p>₹300</p>
+            <button class="cart" onclick="addToCart('Stylish Shirt', 300, 'images/shirt.jpg')">Add to Bag</button>
+            <button class="like-button" onclick="likeProduct('Stylish Shirt', 300, 'images/shirt.jpg')">Add to Wishlist</button>
+        </div>
+        <div class="product" id="product2">
+            <img src="images/trouser.jpg" alt="Trousers" width="250" height="250">
+            <h3>Comfortable Trousers</h3>
+            <p>₹400</p>
+            <button class="cart" onclick="addToCart('Comfortable Trousers', 400, 'images/trouser.jpg')">Add to Bag</button>
+            <button class="like-button" onclick="likeProduct('Comfortable Trousers', 400, 'images/trouser.jpg')">Add to Wishlist</button>
+        </div>
+        <!-- Add more products as needed -->
+    </section>
+
+    <section id="video">
+        <h2>Watch Our Latest Fashion Trends</h2>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/RRv5udKGG68?si=k6OALgKSW70WE8u2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 ClothMart. All rights reserved.</p>
+    </footer>
+<script>
+    let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    let slides = document.getElementsByClassName("banner-slide");
+    let dots = document.getElementsByClassName("nav-dot");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 3000); // Change image every 3 seconds
+}
+
+function currentSlide(n) {
+    slideIndex = n;
+    showSlides();
+}
+
+</script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

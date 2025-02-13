@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liked Products - ClothMart</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.jpg">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.jpg" alt="ClothMart Logo" class="logo">
+            <h1>ClothMart</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <a href="liked.html" class="nav-action-btn">
+                        <img src="images/shopping-bag.png" alt="Wishlist Icon" class="icon" width="25" height="25">
+                        <span class="nav-action-text"></span>
+                        <data class="nav-action-badge" id="wishlist-count" aria-hidden="true">0</data>
+                    </a>
+                </li>
+                <li>
+                    <a href="cart.html" class="nav-action-btn">
+                        <img src="images/shopping-cart.png" alt="Cart Icon" class="icon" width="25" height="25">
+                        <span class="nav-action-text"><strong id="basket-total">₹0.00</strong></span>
+                        <data class="nav-action-badge" id="basket-count" aria-hidden="true">0</data>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="liked-products">
+        <h2>Liked Products</h2>
+        <div id="likedList">
+            <!-- Liked products will be displayed here -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 ClothMart. All rights reserved.</p>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
