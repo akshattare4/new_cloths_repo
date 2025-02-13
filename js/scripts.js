@@ -172,7 +172,7 @@ function placeOrder() {
     localStorage.setItem('cart', JSON.stringify(cart));
     displayCart();
     updateBasketCount();
-    alert("Order placed successfully!");
+    // alert("Order placed successfully!");
 }
 
 function generateReceipt() {
