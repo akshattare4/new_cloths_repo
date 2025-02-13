@@ -25,7 +25,6 @@ function addToCart(productName, productPrice, productImage) {
         cart.push({ name: productName, price: productPrice, quantity: 1, image: productImage });
     }
     localStorage.setItem('cart', JSON.stringify(cart));
-    alert(productName + " has been added to your cart at ₹" + productPrice);
     updateBasketCount();
 }
 
