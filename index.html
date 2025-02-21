@@ -8,6 +8,22 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/x-icon" href="favicon.jpg">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="at.js"></script>
+    <script>
+        adobe.target.getOffer({
+            "mbox": "target-global-mbox",
+            "success": function(offer) {
+            adobe.target.applyOffer({
+                "mbox": "target-global-mbox",
+                "offer": offer
+            });
+            },
+            "error": function(status, error) {
+            console.log('Error:', status, error);
+            }
+        });
+    </script>
+    
     
     
 </head>
